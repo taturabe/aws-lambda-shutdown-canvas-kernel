@@ -39,7 +39,7 @@ Resources:
 
                   for app_page in app_page_iterator:
                       for app in app_page['Apps']:
-                          if app['AppName'] != 'default' and app['Status'] != 'Deleted':
+                          if app['AppType'] == 'Canvas' and app['AppName'] == 'default' and app['Status'] != 'Deleted':
                               delete_app(app['DomainId'], app['UserProfileName'], app['AppType'], app['AppName'])
 
               except Exception as e:
