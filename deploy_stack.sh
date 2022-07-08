@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-#git clone https://github.com/SofianHamiti/aws-lambda-shutdown-studio-kernel.git
+#git clone https://github.com/taturabe/aws-lambda-shutdown-canvas-kernel
 
-#cd aws-lambda-shutdown-studio-kernel
+#cd aws-lambda-shutdown-canvas-kernel
 
 aws cloudformation create-stack \
---stack-name studio-lambda-shutdown \
+--stack-name canvas-lambda-shutdown \
 --template-body file://template.yaml \
 --capabilities CAPABILITY_NAMED_IAM
