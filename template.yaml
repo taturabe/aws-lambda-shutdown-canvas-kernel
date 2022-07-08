@@ -61,7 +61,7 @@ Resources:
     Properties:
       Description: ScheduledRule for Lambda Canvas shutdown
       #ScheduleExpression: cron(0 18 * * ? *)
-      ScheduleExpression: rate(10 minute)
+      ScheduleExpression: rate(10 minutes)
       State: ENABLED
       Targets:
         - Arn: !GetAtt CanvasShutdownFunction.Arn
