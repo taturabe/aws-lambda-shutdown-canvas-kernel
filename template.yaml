@@ -60,7 +60,8 @@ Resources:
     Type: AWS::Events::Rule
     Properties:
       Description: ScheduledRule for Lambda Canvas shutdown
-      ScheduleExpression: cron(0 18 * * ? *)
+      #ScheduleExpression: cron(0 18 * * ? *)
+      ScheduleExpression: rate(10 minute)
       State: ENABLED
       Targets:
         - Arn: !GetAtt CanvasShutdownFunction.Arn
